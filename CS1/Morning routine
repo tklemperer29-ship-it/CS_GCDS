@@ -1,0 +1,112 @@
+import time 
+import datetime
+
+current_time = datetime.datetime(2025, 10, 28, 6, 15, 0)         #The time when the routine starts
+print('Sleep')                                                   #Display Sleep
+
+while True :
+    alarm = input('Alarm?? ').lower()                           #turn all of users answers lower case
+
+    if alarm == 'yes': 
+        print('wake up')                                        #Display wake up
+        current_time += datetime.timedelta(minutes=1)           #Display time + 1 minute 
+        break                                                   #End loop and move to next action
+    elif alarm == 'no':
+        print('go back to sleep for 5 mintues')                 #Display go back to sleep for 5 minutes 
+        time.sleep(2)
+        current_time += datetime.timedelta (minutes=5)          #Display time + 1 minute 
+    else: 
+        print('invalid responce')                               #Display invalid response 
+print(current_time.strftime("%H:%M:%S"))
+while True: 
+    hungry = input('Hungry?').lower()                           #turn all of users answers lower case
+
+    if hungry == 'yes': 
+        print('Make breakfast')                                 #Display make breakfast
+        current_time += datetime.timedelta (minutes=20)         #Display time + 20 minutes 
+        break                                                   #End loop and move to next action
+    elif hungry == 'no': 
+        break                                                   #End loop and move to next action
+    else:
+        print('invalid response')                               #Display invalid response 
+
+print(current_time.strftime("%H:%M:%S"))                        #Display time 
+
+print('Do makeup')                                              #Display do makeup
+current_time += datetime.timedelta (minutes=15)
+print(current_time.strftime("%H:%M:%S"))                        #Display time 
+
+print("Brush teeth")                                            #Display brush teeth 
+current_time += datetime.timedelta (minutes=2)
+print(current_time.strftime("%H:%M:%S"))                        #Display time 
+
+
+while True : 
+    frizzy = input('Hair frizzy?').lower()                      #turn all of users answers lower case
+
+    if frizzy == 'yes': 
+        print('put in hairstyle')                               #Display put on hairstyle 
+        guess = input('cold? ')
+
+        if guess == 'yes': 
+            print('Wear sweater')                               #Display Wear sweater
+            break                                               #End loop and move to next action
+        elif guess == 'no':
+            print('collared shirt')                             #Display collared shirt
+            break                                               #End loop and move to next action
+    elif frizzy == 'no' :
+        print('wear down')                                      #Display wear down 
+        print('collared shirt')                                 #Display collared shirt 
+        break                                                   #End loop and move to next action
+    else: 
+        print('invalid response')                               #Display invalid response 
+
+current_time += datetime.timedelta (minutes=10)
+print(current_time.strftime("%H:%M:%S"))
+
+while True : 
+    freezing = input('Below Freezing?').lower()                 #turn all of users answers lower case
+
+
+    if freezing == 'yes':
+        print('Leggings')                                       #Display Leggings 
+        break                                                   #End loop and move to next action
+    elif freezing == 'no': 
+        print('Mosturize')                                      #Display Mosturize 
+        break                                                   #End loop and move to next action
+    else: 
+        print('invalid response')                               #Display invalid response 
+
+current_time += datetime.timedelta (minutes=5)
+print(current_time.strftime("%H:%M:%S"))
+
+while True : 
+    productive = input('Feeling productive?').lower()          #turn all of users answers lower case
+
+    if productive == 'yes':
+        print('Do work')
+        break                                                  #End loop and move to next action
+    elif productive == 'no': 
+        print('Watch tik tok')                                 #Display watch tik tok 
+        break                                                  #End loop and move to next action
+    else: 
+        print('invalid response')                              #Display invalid response 
+
+while True : 
+    leave = input('Is it 7:50?').lower()                       #turn all of users answers lower case
+    if leave == 'yes':
+        print('leave right now!')                              #Display leave right now 
+        break                                                  #End loop and move to next action
+while True : 
+    time = input('Is it after 7:50?').lower()                  #turn all of users answers lower case
+    if time == 'yes':
+        print('you are late! Go to school')                    #Display you are late! Go to school
+        break                                                  #End loop and move to next action
+    elif time == 'no':
+        print('wait for Ben')                                  #Display wait for Ben 
+
+    else: 
+        print('invalid response')                              #Display invalid response 
+
+
+   
